@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-jki+$aawp#j#-&_g!f1bz_!s5@@zlssnlgfm67fob4@o+$@ock
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['weathertomail.herokuapp.com']
 
 
 # Application definition
