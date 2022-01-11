@@ -1,3 +1,4 @@
+import os
 """
 Django settings for weatherapi project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-jki+$aawp#j#-&_g!f1bz_!s5@@zlssnlgfm67fob4@o+$@ock
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['weathertomail.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
     'core.apps.CoreConfig', 
 ]
 
@@ -128,7 +128,6 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK='bootstrap4'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
