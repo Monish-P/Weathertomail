@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jki+$aawp#j#-&_g!f1bz_!s5@@zlssnlgfm67fob4@o+$@ock'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['weathertomail.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -106,7 +106,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'monishsai.pv@gmail.com'
+EMAIL_HOST_USER = 'monishpalisetti@gmail.com'
 EMAIL_HOST_PASSWORD = 'teamexaliber'
 
 # Internationalization
