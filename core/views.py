@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse
 import json
 import urllib.request
 from .models import User
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
 
 def home(request):
@@ -31,6 +31,13 @@ def index(request):
             emoji = '🥵'
         message = 'The temperature in '+city+' is '+temp+' '+emoji
         email_from = settings.EMAIL_HOST_USER
-        recipient_list = [email,]
-        send_mail(subject,message,email_from,recipient_list)
+        recipient_list = [email]
+        reciever_email = EmailMessage(
+            subject,
+            message,
+            email_from,
+            recipient_list
+        )
+        reciever_email.fail_silently = False
+        reciever_email.send()
         return HttpResponse('The weather details have been sent, Check your mail! Thank you🤗')
