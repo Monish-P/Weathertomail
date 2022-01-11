@@ -1,0 +1,30 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Service</title>
+</head>
+<body>
+    <h1>Weather Service</h1>
+    <form method="POST" action="userdetails">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" width="100px" /><br>
+        <label for='email'>Email:</label>
+        <input type="text" name="email" id="email" width="100px" /><br>
+        <label>Select city:</label>
+        <input type="text" list="cities" name="city" id="city">
+        <datalist id="cities">
+            <option value="Mumbai">
+            <option value="Delhi">
+            <option value="Chennai">
+            <option value="Mumbai">
+            <option value="Bangalore">
+            <option value="Kolkata">
+        </datalist>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
