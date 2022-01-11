@@ -21,7 +21,6 @@ daphne==3.0.2
 distlib==0.3.2
 dj-database-url==0.5.0
 Django==3.2.6
--e git+git://github.com/maraujop/django-crispy-forms.git@7ce02ff6a4a720fd0969341d4787528dba80a589#egg=django_crispy_forms
 django-heroku==0.3.1
 django-ranged-response==0.2.0
 django-simple-captcha==0.5.14
